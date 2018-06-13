@@ -1,0 +1,70 @@
+
+<p class="titulo">Cálculo de préstamos</p>
+
+</p>Cálculo de préstamos - Para el cálculo de préstamos, esta calculadora le permite 
+  calcular la cuota mensual a pagar en su préstamo, así como el total de intereses.
+</p>
+<fieldset  class="scheduler-border" ><legend class="scheduler-border">Cálculo de prestamos</legend>
+	<div class="container" style= "width: 60%; center;">
+		<div class="row">
+	    	<div class="col-md-9 is-centered">
+	        	<div class="well well-form">
+	            	<div class="row">
+	              		<div class="col-sm-6 form-group" style="line-height: 36px;">
+	                 		<label>Importe</label>
+	              		</div>
+	              		<div class="col-sm-6 form-group">
+	                		<input class="form-control input-sm" type="text" style="text-align:right;"
+	                		ng-model="importe">
+	              		</div>
+	            	</div>
+	                <div class="row ">
+	              		<div class="col-sm-6 form-group" style="line-height: 36px;">
+	                 		<label>Provincia</label>
+	              		</div>	
+	                  	<div class="col-sm-6 form-group">
+	                    	<select class="form-control input-sm"
+		    	               ng-options="prov.state for prov in provincias track by prov.id"
+		      			       ng-model="data.selectedOption"></select>
+	                  	</div>  	                  	            	
+	              	</div>
+	              	<div class="row">
+	              		<div class="col-sm-6 form-group" style="line-height: 36px;">
+	                 		<label>Taza de interés</label>
+	              		</div>
+	              		<div class="col-sm-6 form-group">
+	                		<input class="form-control input-sm" type="text" placeholder="%"
+	                		style="text-align:right;" ng-model="taza">
+	              		</div>	              		
+	            	</div>
+					<div class="container">
+                        <div class="col-sm-6 form-group">
+							<button type="button" class="btn btn-primary" ng-click="calcular()">CALCULAR
+							</button>	              		
+	              			<button type="button" class="btn btn-primary" ng-click="borrar()">BORRAR
+	              			</button>    
+	              		</div>          		
+	            	</div>
+					<div class="row">
+	              		<div class="col-sm-6 form-group" style="line-height: 36px;">
+	                 		<label>Cuota mensual</label>
+	              		</div>
+	              		<div class="col-sm-6 form-group">
+	                		<input class="form-control input-sm" type="text" style="text-align:right;"
+	                		ng-model="cuota">
+	              		</div>	              		
+	            	</div>
+	            	<div class="row">
+	              		<div class="col-sm-6 form-group" style="line-height: 36px;">
+	                 		<label>Total a pagar</label>
+	              		</div>
+	              		<div class="col-sm-6 form-group">
+	                		<input class="form-control input-sm" type="text" style="text-align:right;"
+	                		ng-model="total">
+	              		</div>	              		
+	            	</div>
+	            </div>
+	        </div>
+		</div>
+	</div>
+</fieldset>
